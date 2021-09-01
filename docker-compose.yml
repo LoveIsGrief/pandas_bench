@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  bench:
+    image: "freqtradeorg/freqtrade:2021.8"
+    entrypoint: /usr/local/bin/python3
+    command: /tmp/benchmark.py
+    volumes:
+      - ./benchmark.py:/tmp/benchmark.py
+
