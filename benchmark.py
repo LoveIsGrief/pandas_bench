@@ -16,7 +16,6 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 import json
-import os
 import subprocess
 import timeit
 
@@ -25,22 +24,25 @@ import pandas as pd
 from pandas import DataFrame
 from talib import abstract as ta
 
+START = 10
+STOP = 115
+
 
 def do_loc(dataframe: pd.DataFrame) -> pd.DataFrame:
-    for period in range(10, 115):
+    for period in range(START, STOP):
         dataframe.loc[:, f"sma_{period}"] = ta.SMA(dataframe, timeperiod=period)
     return dataframe.copy()
 
 
 def do_no_workaround(dataframe: pd.DataFrame) -> pd.DataFrame:
-    for period in range(10, 115):
+    for period in range(START, STOP):
         dataframe[f"sma_{period}"] = ta.SMA(dataframe, timeperiod=period)
     return dataframe.copy()
 
 
 def do_workaround(dataframe: pd.DataFrame) -> pd.DataFrame:
     frames = [dataframe]
-    for period in range(10, 115):
+    for period in range(START, STOP):
         frames.append(DataFrame({
             f"sma_{period}": ta.SMA(dataframe, timeperiod=period)
         }))
@@ -49,7 +51,7 @@ def do_workaround(dataframe: pd.DataFrame) -> pd.DataFrame:
 
 def do_other_workaround(dataframe: pd.DataFrame) -> pd.DataFrame:
     frame = None
-    for period in range(10, 115):
+    for period in range(START, STOP):
         p_frame = DataFrame({f"sma_{period}": ta.SMA(dataframe, timeperiod=period)})
         if frame is not None:
             frame = pd.concat([frame, p_frame], axis=1)
@@ -67,30 +69,23 @@ def get_cpu_info():
 
 def main():
     # cur_path = Path(__file__)
-    # print(get_cpu_info())
+    print("Model name: {Model name}\n"
+          "Architecture: {Architecture}\n"
+          "CPU(s): {CPU(s)}\n".format(**get_cpu_info()), flush=True)
 
-    # dataframe = load_pair_history("AAVE/BTC", "5m", (cur_path.parent / "user_data/data/binance"))
+    tests = [
+        do_loc,
+        do_no_workaround,
+        do_workaround
+    ]
     dataframe = DataFrame(dict(close=np.random.randn(300_000)))
     print(f"len dataframe {len(dataframe)}")
     count = 1000
-
-    print("do_loc")
-    time = timeit.timeit(lambda: do_loc(dataframe.copy()), number=count)
-    print(f"len dataframe {len(dataframe)}")
-    print(f"Seconds to run {count} times: {time} (per run {time / count})")
-
-    print("\ndo_no_workaround")
-    count = 1000
-    time = timeit.timeit(lambda: do_no_workaround(dataframe.copy()), number=count)
-    print(f"Seconds to run {count} times: {time} (per run {time / count})")
-
-    print("\ndo_workaround")
-    time = timeit.timeit(lambda: do_workaround(dataframe.copy()), number=count)
-    print(f"Seconds to run {count} times: {time} (per run {time / count})")
-
-    # print("\ndo_other_workaround")
-    # time = timeit.timeit(lambda: do_other_workaround(dataframe.copy()), number=count)
-    # print(f"Seconds to run {count} times: {time} (per run {time / count})")
+    for test in tests:
+        name = test.__name__
+        print(f"\n{name}", flush=True)
+        time = timeit.timeit(lambda: test(dataframe.copy()), number=count)
+        print(f"Seconds to run {count} times: {time} (per run {time / count})", flush=True)
 
 
 if __name__ == '__main__':
