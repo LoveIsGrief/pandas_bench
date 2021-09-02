@@ -6,15 +6,15 @@
   <config:config-item-set config:name="ooo:view-settings">
    <config:config-item config:name="VisibleAreaTop" config:type="int">0</config:config-item>
    <config:config-item config:name="VisibleAreaLeft" config:type="int">0</config:config-item>
-   <config:config-item config:name="VisibleAreaWidth" config:type="int">22957</config:config-item>
-   <config:config-item config:name="VisibleAreaHeight" config:type="int">6321</config:config-item>
+   <config:config-item config:name="VisibleAreaWidth" config:type="int">33252</config:config-item>
+   <config:config-item config:name="VisibleAreaHeight" config:type="int">3160</config:config-item>
    <config:config-item-map-indexed config:name="Views">
     <config:config-item-map-entry>
      <config:config-item config:name="ViewId" config:type="string">view1</config:config-item>
      <config:config-item-map-named config:name="Tables">
       <config:config-item-map-entry config:name="Evaluation">
-       <config:config-item config:name="CursorPositionX" config:type="int">2</config:config-item>
-       <config:config-item config:name="CursorPositionY" config:type="int">7</config:config-item>
+       <config:config-item config:name="CursorPositionX" config:type="int">3</config:config-item>
+       <config:config-item config:name="CursorPositionY" config:type="int">10</config:config-item>
        <config:config-item config:name="HorizontalSplitMode" config:type="short">0</config:config-item>
        <config:config-item config:name="VerticalSplitMode" config:type="short">0</config:config-item>
        <config:config-item config:name="HorizontalSplitPosition" config:type="int">0</config:config-item>
@@ -25,8 +25,8 @@
        <config:config-item config:name="PositionTop" config:type="int">0</config:config-item>
        <config:config-item config:name="PositionBottom" config:type="int">0</config:config-item>
        <config:config-item config:name="ZoomType" config:type="short">0</config:config-item>
-       <config:config-item config:name="ZoomValue" config:type="int">130</config:config-item>
-       <config:config-item config:name="PageViewZoomValue" config:type="int">60</config:config-item>
+       <config:config-item config:name="ZoomValue" config:type="int">120</config:config-item>
+       <config:config-item config:name="PageViewZoomValue" config:type="int">140</config:config-item>
        <config:config-item config:name="ShowGrid" config:type="boolean">true</config:config-item>
        <config:config-item config:name="AnchoredTextOverflowLegacy" config:type="boolean">false</config:config-item>
       </config:config-item-map-entry>
@@ -43,8 +43,8 @@
        <config:config-item config:name="PositionTop" config:type="int">0</config:config-item>
        <config:config-item config:name="PositionBottom" config:type="int">0</config:config-item>
        <config:config-item config:name="ZoomType" config:type="short">0</config:config-item>
-       <config:config-item config:name="ZoomValue" config:type="int">130</config:config-item>
-       <config:config-item config:name="PageViewZoomValue" config:type="int">60</config:config-item>
+       <config:config-item config:name="ZoomValue" config:type="int">120</config:config-item>
+       <config:config-item config:name="PageViewZoomValue" config:type="int">140</config:config-item>
        <config:config-item config:name="ShowGrid" config:type="boolean">true</config:config-item>
        <config:config-item config:name="AnchoredTextOverflowLegacy" config:type="boolean">false</config:config-item>
       </config:config-item-map-entry>
@@ -52,8 +52,8 @@
      <config:config-item config:name="ActiveTable" config:type="string">Evaluation</config:config-item>
      <config:config-item config:name="HorizontalScrollbarWidth" config:type="int">1851</config:config-item>
      <config:config-item config:name="ZoomType" config:type="short">0</config:config-item>
-     <config:config-item config:name="ZoomValue" config:type="int">130</config:config-item>
-     <config:config-item config:name="PageViewZoomValue" config:type="int">60</config:config-item>
+     <config:config-item config:name="ZoomValue" config:type="int">120</config:config-item>
+     <config:config-item config:name="PageViewZoomValue" config:type="int">140</config:config-item>
      <config:config-item config:name="ShowPageBreakPreview" config:type="boolean">false</config:config-item>
      <config:config-item config:name="ShowZeroValues" config:type="boolean">true</config:config-item>
      <config:config-item config:name="ShowNotes" config:type="boolean">true</config:config-item>
@@ -112,11 +112,11 @@
    <config:config-item config:name="IsDocumentShared" config:type="boolean">false</config:config-item>
    <config:config-item config:name="AllowPrintJobCancel" config:type="boolean">true</config:config-item>
    <config:config-item-map-named config:name="ScriptConfiguration">
-    <config:config-item-map-entry config:name="results.csv">
+    <config:config-item-map-entry config:name="Evaluation">
      <config:config-item config:name="CodeName" config:type="string">Sheet1</config:config-item>
     </config:config-item-map-entry>
-    <config:config-item-map-entry config:name="Evaluation">
-     <config:config-item config:name="CodeName" config:type="string">Pivot Table_results_1</config:config-item>
+    <config:config-item-map-entry config:name="results.csv">
+     <config:config-item config:name="CodeName" config:type="string">results.csv</config:config-item>
     </config:config-item-map-entry>
    </config:config-item-map-named>
   </config:config-item-set>
@@ -224,52 +224,52 @@
   </style:style>
  </office:styles>
  <office:automatic-styles>
-  <style:style style:name="co1" style:family="table-column">
+  <style:style style:name="co10" style:family="table-column">
    <style:table-column-properties fo:break-before="auto" style:column-width="2.921cm"/>
   </style:style>
-  <style:style style:name="co2" style:family="table-column">
+  <style:style style:name="co11" style:family="table-column">
    <style:table-column-properties fo:break-before="auto" style:column-width="1.969cm"/>
   </style:style>
-  <style:style style:name="co3" style:family="table-column">
+  <style:style style:name="co12" style:family="table-column">
    <style:table-column-properties fo:break-before="auto" style:column-width="1.942cm"/>
   </style:style>
-  <style:style style:name="co4" style:family="table-column">
+  <style:style style:name="co13" style:family="table-column">
    <style:table-column-properties fo:break-before="auto" style:column-width="3.276cm"/>
   </style:style>
-  <style:style style:name="co5" style:family="table-column">
+  <style:style style:name="co14" style:family="table-column">
    <style:table-column-properties fo:break-before="auto" style:column-width="8.994cm"/>
   </style:style>
-  <style:style style:name="co6" style:family="table-column">
+  <style:style style:name="co15" style:family="table-column">
    <style:table-column-properties fo:break-before="auto" style:column-width="1.833cm"/>
   </style:style>
-  <style:style style:name="co7" style:family="table-column">
+  <style:style style:name="co16" style:family="table-column">
    <style:table-column-properties fo:break-before="auto" style:column-width="2.023cm"/>
   </style:style>
-  <style:style style:name="co8" style:family="table-column">
+  <style:style style:name="co9" style:family="table-column">
    <style:table-column-properties fo:break-before="auto" style:column-width="2.258cm"/>
   </style:style>
-  <style:style style:name="co9" style:family="table-column">
+  <style:style style:name="co17" style:family="table-column">
    <style:table-column-properties fo:break-before="auto" style:column-width="9.361cm"/>
   </style:style>
-  <style:style style:name="co10" style:family="table-column">
+  <style:style style:name="co18" style:family="table-column">
    <style:table-column-properties fo:break-before="auto" style:column-width="4.357cm"/>
   </style:style>
-  <style:style style:name="co11" style:family="table-column">
+  <style:style style:name="co19" style:family="table-column">
    <style:table-column-properties fo:break-before="auto" style:column-width="3.267cm"/>
   </style:style>
-  <style:style style:name="co12" style:family="table-column">
+  <style:style style:name="co20" style:family="table-column">
    <style:table-column-properties fo:break-before="auto" style:column-width="3.743cm"/>
   </style:style>
-  <style:style style:name="co13" style:family="table-column">
+  <style:style style:name="co21" style:family="table-column">
    <style:table-column-properties fo:break-before="auto" style:column-width="2.618cm"/>
   </style:style>
-  <style:style style:name="co14" style:family="table-column">
+  <style:style style:name="co22" style:family="table-column">
    <style:table-column-properties fo:break-before="auto" style:column-width="5.697cm"/>
   </style:style>
-  <style:style style:name="co15" style:family="table-column">
+  <style:style style:name="co23" style:family="table-column">
    <style:table-column-properties fo:break-before="auto" style:column-width="4.21cm"/>
   </style:style>
-  <style:style style:name="co16" style:family="table-column">
+  <style:style style:name="co24" style:family="table-column">
    <style:table-column-properties fo:break-before="auto" style:column-width="3.288cm"/>
   </style:style>
   <style:style style:name="ro1" style:family="table-row">
@@ -285,49 +285,49 @@
    <number:number number:decimal-places="2" number:min-decimal-places="2" number:min-integer-digits="1"/>
    <number:text>%</number:text>
   </number:percentage-style>
-  <style:style style:name="ce67" style:family="table-cell" style:parent-style-name="Default">
+  <style:style style:name="ce76" style:family="table-cell" style:parent-style-name="Default" style:data-style-name="N107"/>
+  <style:style style:name="ce97" style:family="table-cell" style:parent-style-name="Default">
    <style:table-cell-properties style:text-align-source="fix" style:repeat-content="false"/>
    <style:paragraph-properties fo:text-align="center" fo:margin-left="0cm"/>
    <style:text-properties fo:color="#c9211e" fo:font-weight="bold" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
-  <style:style style:name="ce2" style:family="table-cell" style:parent-style-name="Default">
+  <style:style style:name="ce98" style:family="table-cell" style:parent-style-name="Default">
    <style:text-properties fo:font-weight="bold" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
-  <style:style style:name="ce3" style:family="table-cell" style:parent-style-name="Default" style:data-style-name="N107"/>
-  <style:style style:name="ce68" style:family="table-cell" style:parent-style-name="Default" style:data-style-name="N107"/>
-  <style:style style:name="ce5" style:family="table-cell" style:parent-style-name="Pivot_20_Table_20_Corner">
+  <style:style style:name="ce4" style:family="table-cell" style:parent-style-name="Pivot_20_Table_20_Corner">
    <style:table-cell-properties fo:border-bottom="none" fo:border-left="2.01pt solid #000000" fo:border-right="0.99pt solid #000000" fo:border-top="2.01pt solid #000000"/>
   </style:style>
-  <style:style style:name="ce6" style:family="table-cell" style:parent-style-name="Pivot_20_Table_20_Field">
+  <style:style style:name="ce5" style:family="table-cell" style:parent-style-name="Pivot_20_Table_20_Field">
    <style:table-cell-properties fo:border-bottom="0.99pt solid #000000" fo:border-left="2.01pt solid #000000" fo:border-right="0.99pt solid #000000" fo:border-top="0.99pt solid #000000"/>
   </style:style>
-  <style:style style:name="ce7" style:family="table-cell" style:parent-style-name="Pivot_20_Table_20_Category" style:data-style-name="N0">
+  <style:style style:name="ce6" style:family="table-cell" style:parent-style-name="Pivot_20_Table_20_Category" style:data-style-name="N0">
    <style:table-cell-properties fo:border-bottom="none" fo:border-left="2.01pt solid #000000" fo:border-right="0.99pt solid #000000" fo:border-top="0.99pt solid #000000"/>
   </style:style>
-  <style:style style:name="ce8" style:family="table-cell" style:parent-style-name="Pivot_20_Table_20_Category" style:data-style-name="N0">
+  <style:style style:name="ce7" style:family="table-cell" style:parent-style-name="Pivot_20_Table_20_Category" style:data-style-name="N0">
    <style:table-cell-properties fo:border-bottom="none" fo:border-left="2.01pt solid #000000" fo:border-right="0.99pt solid #000000" fo:border-top="none"/>
   </style:style>
-  <style:style style:name="ce9" style:family="table-cell" style:parent-style-name="Pivot_20_Table_20_Title" style:data-style-name="N0">
+  <style:style style:name="ce8" style:family="table-cell" style:parent-style-name="Pivot_20_Table_20_Title" style:data-style-name="N0">
    <style:table-cell-properties fo:border-bottom="2.01pt solid #000000" fo:border-left="2.01pt solid #000000" fo:border-right="0.99pt solid #000000" fo:border-top="0.99pt solid #000000"/>
   </style:style>
-  <style:style style:name="ce10" style:family="table-cell" style:parent-style-name="Pivot_20_Table_20_Field" style:data-style-name="N107">
+  <style:style style:name="ce9" style:family="table-cell" style:parent-style-name="Pivot_20_Table_20_Field" style:data-style-name="N107">
    <style:table-cell-properties fo:border-bottom="0.99pt solid #000000" fo:border-left="0.99pt solid #000000" fo:border-right="0.99pt solid #000000" fo:border-top="2.01pt solid #000000"/>
   </style:style>
-  <style:style style:name="ce11" style:family="table-cell" style:parent-style-name="Pivot_20_Table_20_Category" style:data-style-name="N107">
+  <style:style style:name="ce10" style:family="table-cell" style:parent-style-name="Pivot_20_Table_20_Category" style:data-style-name="N107">
    <style:table-cell-properties fo:border-bottom="0.99pt solid #000000" fo:border-left="0.99pt solid #000000" fo:border-right="none" fo:border-top="none"/>
   </style:style>
-  <style:style style:name="ce12" style:family="table-cell" style:parent-style-name="Pivot_20_Table_20_Value" style:data-style-name="N107">
+  <style:style style:name="ce11" style:family="table-cell" style:parent-style-name="Pivot_20_Table_20_Value" style:data-style-name="N107">
    <style:table-cell-properties fo:border-bottom="none" fo:border-left="0.99pt solid #000000" fo:border-right="none" fo:border-top="0.99pt solid #000000"/>
   </style:style>
-  <style:style style:name="ce13" style:family="table-cell" style:parent-style-name="Pivot_20_Table_20_Value" style:data-style-name="N107">
+  <style:style style:name="ce12" style:family="table-cell" style:parent-style-name="Pivot_20_Table_20_Value" style:data-style-name="N107">
    <style:table-cell-properties fo:border-bottom="none" fo:border-left="0.99pt solid #000000" fo:border-right="none" fo:border-top="none"/>
   </style:style>
-  <style:style style:name="ce14" style:family="table-cell" style:parent-style-name="Pivot_20_Table_20_Value" style:data-style-name="N107">
+  <style:style style:name="ce13" style:family="table-cell" style:parent-style-name="Pivot_20_Table_20_Value" style:data-style-name="N107">
    <style:table-cell-properties fo:border-bottom="0.99pt solid #000000" fo:border-left="0.99pt solid #000000" fo:border-right="none" fo:border-top="none"/>
   </style:style>
-  <style:style style:name="ce15" style:family="table-cell" style:parent-style-name="Pivot_20_Table_20_Result" style:data-style-name="N107">
+  <style:style style:name="ce14" style:family="table-cell" style:parent-style-name="Pivot_20_Table_20_Result" style:data-style-name="N107">
    <style:table-cell-properties fo:border-bottom="2.01pt solid #000000" fo:border-left="0.99pt solid #000000" fo:border-right="none" fo:border-top="0.99pt solid #000000"/>
   </style:style>
+  <style:style style:name="ce15" style:family="table-cell" style:parent-style-name="Default" style:data-style-name="N107"/>
   <style:style style:name="ce16" style:family="table-cell" style:parent-style-name="Pivot_20_Table_20_Corner" style:data-style-name="N107">
    <style:table-cell-properties fo:border-bottom="0.99pt solid #000000" fo:border-left="none" fo:border-right="none" fo:border-top="2.01pt solid #000000"/>
   </style:style>
@@ -374,26 +374,34 @@
   <style:style style:name="ce31" style:family="table-cell" style:parent-style-name="Pivot_20_Table_20_Result" style:data-style-name="N107">
    <style:table-cell-properties fo:border-bottom="2.01pt solid #000000" fo:border-left="0.99pt solid #000000" fo:border-right="2.01pt solid #000000" fo:border-top="0.99pt solid #000000"/>
   </style:style>
-  <style:style style:name="ce96" style:family="table-cell" style:parent-style-name="Default">
+  <style:style style:name="ce93" style:family="table-cell" style:parent-style-name="Default">
    <style:table-cell-properties style:text-align-source="fix" style:repeat-content="false"/>
    <style:paragraph-properties fo:text-align="center" fo:margin-left="0cm"/>
   </style:style>
-  <style:style style:name="ce97" style:family="table-cell" style:parent-style-name="Default">
+  <style:style style:name="ce94" style:family="table-cell" style:parent-style-name="Default">
    <style:table-cell-properties style:text-align-source="fix" style:repeat-content="false"/>
    <style:paragraph-properties fo:text-align="center" fo:margin-left="0cm"/>
    <style:text-properties fo:font-weight="bold" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
-  <style:style style:name="ce98" style:family="table-cell" style:parent-style-name="Default" style:data-style-name="N11">
+  <style:style style:name="ce95" style:family="table-cell" style:parent-style-name="Default" style:data-style-name="N11">
    <style:table-cell-properties style:text-align-source="fix" style:repeat-content="false"/>
    <style:paragraph-properties fo:text-align="center" fo:margin-left="0cm"/>
   </style:style>
-  <style:style style:name="ce99" style:family="table-cell" style:parent-style-name="Default" style:data-style-name="N11">
+  <style:style style:name="ce96" style:family="table-cell" style:parent-style-name="Default" style:data-style-name="N11">
    <style:table-cell-properties style:text-align-source="fix" style:repeat-content="false"/>
    <style:paragraph-properties fo:text-align="center" fo:margin-left="0cm"/>
+   <style:text-properties fo:font-weight="bold" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="ce36" style:family="table-cell" style:parent-style-name="Default">
+   <style:table-cell-properties style:text-align-source="fix" style:repeat-content="false"/>
+   <style:paragraph-properties fo:text-align="center" fo:margin-left="0cm"/>
+   <style:text-properties fo:color="#c9211e" fo:font-weight="bold" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="ce37" style:family="table-cell" style:parent-style-name="Default">
    <style:text-properties fo:font-weight="bold" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
   <style:page-layout style:name="pm1">
-   <style:page-layout-properties style:writing-mode="lr-tb"/>
+   <style:page-layout-properties fo:page-width="42cm" fo:page-height="29.7cm" style:num-format="1" style:print-orientation="landscape" style:writing-mode="lr-tb"/>
    <style:header-style>
     <style:header-footer-properties fo:min-height="0.75cm" fo:margin-left="0cm" fo:margin-right="0cm" fo:margin-bottom="0.25cm"/>
    </style:header-style>
@@ -432,7 +440,7 @@
      <text:p><text:sheet-name>???</text:sheet-name><text:s/>(<text:title>???</text:title>)</text:p>
     </style:region-left>
     <style:region-right>
-     <text:p><text:date style:data-style-name="N2" text:date-value="2021-09-02">00-00-0000</text:date>, <text:time style:data-style-name="N2" text:time-value="21:05:51.074593784">00:00:00</text:time></text:p>
+     <text:p><text:date style:data-style-name="N2" text:date-value="2021-09-02">00-00-0000</text:date>, <text:time style:data-style-name="N2" text:time-value="21:51:23.055904033">00:00:00</text:time></text:p>
     </style:region-right>
    </style:header>
    <style:header-left style:display="false"/>
@@ -445,47 +453,210 @@
  <office:body>
   <office:spreadsheet>
    <table:calculation-settings table:automatic-find-labels="false" table:use-regular-expressions="false" table:use-wildcards="true"/>
-   <table:table table:name="results.csv" table:style-name="ta1">
-    <table:table-column table:style-name="co1" table:default-cell-style-name="Default"/>
-    <table:table-column table:style-name="co2" table:default-cell-style-name="Default"/>
-    <table:table-column table:style-name="co3" table:default-cell-style-name="Default"/>
-    <table:table-column table:style-name="co4" table:default-cell-style-name="ce68"/>
-    <table:table-column table:style-name="co5" table:default-cell-style-name="Default"/>
-    <table:table-column table:style-name="co6" table:default-cell-style-name="Default"/>
-    <table:table-column table:style-name="co7" table:default-cell-style-name="Default"/>
-    <table:table-column table:style-name="co8" table:number-columns-repeated="1017" table:default-cell-style-name="Default"/>
+   <table:table table:name="Evaluation" table:style-name="ta1">
+    <table:table-column table:style-name="co17" table:default-cell-style-name="Default"/>
+    <table:table-column table:style-name="co18" table:default-cell-style-name="ce15"/>
+    <table:table-column table:style-name="co19" table:default-cell-style-name="ce15"/>
+    <table:table-column table:style-name="co20" table:default-cell-style-name="ce15"/>
+    <table:table-column table:style-name="co21" table:default-cell-style-name="ce15"/>
+    <table:table-column table:style-name="co22" table:default-cell-style-name="ce93"/>
+    <table:table-column table:style-name="co23" table:default-cell-style-name="ce95"/>
+    <table:table-column table:style-name="co24" table:default-cell-style-name="Default"/>
     <table:table-row table:style-name="ro1">
-     <table:table-cell table:style-name="ce67" office:value-type="string" calcext:value-type="string" table:number-columns-spanned="7" table:number-rows-spanned="1">
+     <table:table-cell table:style-name="ce4" office:value-type="string" calcext:value-type="string">
+      <text:p>Average - time</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce9" office:value-type="string" calcext:value-type="string">
+      <text:p>benchmark</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce16" table:number-columns-repeated="2"/>
+     <table:table-cell table:style-name="ce26"/>
+     <table:table-cell table:number-columns-repeated="3"/>
+    </table:table-row>
+    <table:table-row table:style-name="ro1">
+     <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
+      <text:p>CPU model</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce10" office:value-type="string" calcext:value-type="string">
+      <text:p>no_workaround</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce17" office:value-type="string" calcext:value-type="string">
+      <text:p>with_loc</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce17" office:value-type="string" calcext:value-type="string">
+      <text:p>with_workaround</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce27" office:value-type="string" calcext:value-type="string">
+      <text:p>Total Result</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce94" office:value-type="string" calcext:value-type="string">
+      <text:p>Workaround % no workaround</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce96" office:value-type="string" calcext:value-type="string">
+      <text:p>workaround time % loc</text:p>
+     </table:table-cell>
+     <table:table-cell/>
+    </table:table-row>
+    <table:table-row table:style-name="ro1">
+     <table:table-cell table:style-name="ce6" office:value-type="string" calcext:value-type="string">
+      <text:p>AMD Ryzen 5 2400G with Radeon Vega Graphics</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce11" office:value-type="float" office:value="540.701800495386" calcext:value-type="float">
+      <text:p>540,7</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce18" office:value-type="float" office:value="567.921154816635" calcext:value-type="float">
+      <text:p>567,9</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce22" office:value-type="float" office:value="442.031032536179" calcext:value-type="float">
+      <text:p>442,0</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce28" office:value-type="float" office:value="516.884662616067" calcext:value-type="float">
+      <text:p>516,9</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce95" table:formula="of:=[.$D3]/[.B3]" office:value-type="percentage" office:value="0.817513520634098" calcext:value-type="percentage">
+      <text:p>81,75%</text:p>
+     </table:table-cell>
+     <table:table-cell table:formula="of:=[.$D3]/[.C3]" office:value-type="percentage" office:value="0.778331690565212" calcext:value-type="percentage">
+      <text:p>77,83%</text:p>
+     </table:table-cell>
+     <table:table-cell/>
+    </table:table-row>
+    <table:table-row table:style-name="ro1">
+     <table:table-cell table:style-name="ce7" office:value-type="string" calcext:value-type="string">
+      <text:p>AMD Ryzen 5 3500U with Radeon Vega Mobile Gfx</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce12" office:value-type="float" office:value="420.531277493996" calcext:value-type="float">
+      <text:p>420,5</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce19" office:value-type="float" office:value="426.819339965005" calcext:value-type="float">
+      <text:p>426,8</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce23" office:value-type="float" office:value="342.230808434004" calcext:value-type="float">
+      <text:p>342,2</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce29" office:value-type="float" office:value="396.527141964335" calcext:value-type="float">
+      <text:p>396,5</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce95" table:formula="of:=[.$D4]/[.B4]" office:value-type="percentage" office:value="0.813805837400263" calcext:value-type="percentage">
+      <text:p>81,38%</text:p>
+     </table:table-cell>
+     <table:table-cell table:formula="of:=[.$D4]/[.C4]" office:value-type="percentage" office:value="0.801816544822134" calcext:value-type="percentage">
+      <text:p>80,18%</text:p>
+     </table:table-cell>
+     <table:table-cell/>
+    </table:table-row>
+    <table:table-row table:style-name="ro1">
+     <table:table-cell table:style-name="ce7" office:value-type="string" calcext:value-type="string">
+      <text:p>AMD Ryzen 5 PRO 3400G with Radeon Vega Graphics</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce12" office:value-type="float" office:value="345.284840297998" calcext:value-type="float">
+      <text:p>345,3</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce19" office:value-type="float" office:value="357.955207077" calcext:value-type="float">
+      <text:p>358,0</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce23" office:value-type="float" office:value="242.167714471998" calcext:value-type="float">
+      <text:p>242,2</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce29" office:value-type="float" office:value="315.135920615665" calcext:value-type="float">
+      <text:p>315,1</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce95" table:formula="of:=[.$D5]/[.B5]" office:value-type="percentage" office:value="0.701356347596944" calcext:value-type="percentage">
+      <text:p>70,14%</text:p>
+     </table:table-cell>
+     <table:table-cell table:formula="of:=[.$D5]/[.C5]" office:value-type="percentage" office:value="0.676530777270982" calcext:value-type="percentage">
+      <text:p>67,65%</text:p>
+     </table:table-cell>
+     <table:table-cell/>
+    </table:table-row>
+    <table:table-row table:style-name="ro1">
+     <table:table-cell table:style-name="ce7" office:value-type="string" calcext:value-type="string">
+      <text:p>Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce13" office:value-type="float" office:value="529.270477404003" calcext:value-type="float">
+      <text:p>529,3</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce20" office:value-type="float" office:value="527.762633746999" calcext:value-type="float">
+      <text:p>527,8</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce24" office:value-type="float" office:value="484.492259248" calcext:value-type="float">
+      <text:p>484,5</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce30" office:value-type="float" office:value="513.841790133001" calcext:value-type="float">
+      <text:p>513,8</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce95" table:formula="of:=[.$D6]/[.B6]" office:value-type="percentage" office:value="0.915396342573964" calcext:value-type="percentage">
+      <text:p>91,54%</text:p>
+     </table:table-cell>
+     <table:table-cell table:formula="of:=[.$D6]/[.C6]" office:value-type="percentage" office:value="0.918011674695897" calcext:value-type="percentage">
+      <text:p>91,80%</text:p>
+     </table:table-cell>
+     <table:table-cell/>
+    </table:table-row>
+    <table:table-row table:style-name="ro1">
+     <table:table-cell table:style-name="ce8" office:value-type="string" calcext:value-type="string">
+      <text:p>Total Result</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce14" office:value-type="float" office:value="458.947098922846" calcext:value-type="float">
+      <text:p>458,9</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce21" office:value-type="float" office:value="470.11458390141" calcext:value-type="float">
+      <text:p>470,1</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce25" office:value-type="float" office:value="377.730453672545" calcext:value-type="float">
+      <text:p>377,7</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="ce31" office:value-type="float" office:value="435.597378832267" calcext:value-type="float">
+      <text:p>435,6</text:p>
+     </table:table-cell>
+     <table:table-cell table:number-columns-repeated="3"/>
+    </table:table-row>
+    <table:table-row table:style-name="ro1" table:number-rows-repeated="1048568">
+     <table:table-cell table:number-columns-repeated="8"/>
+    </table:table-row>
+    <table:table-row table:style-name="ro1">
+     <table:table-cell table:number-columns-repeated="8"/>
+    </table:table-row>
+   </table:table>
+   <table:table table:name="results.csv" table:style-name="ta1">
+    <table:table-column table:style-name="co10" table:default-cell-style-name="Default"/>
+    <table:table-column table:style-name="co11" table:default-cell-style-name="Default"/>
+    <table:table-column table:style-name="co12" table:default-cell-style-name="Default"/>
+    <table:table-column table:style-name="co13" table:default-cell-style-name="ce15"/>
+    <table:table-column table:style-name="co14" table:default-cell-style-name="Default"/>
+    <table:table-column table:style-name="co15" table:default-cell-style-name="Default"/>
+    <table:table-column table:style-name="co16" table:default-cell-style-name="Default"/>
+    <table:table-column table:style-name="co9" table:number-columns-repeated="1017" table:default-cell-style-name="Default"/>
+    <table:table-row table:style-name="ro1">
+     <table:table-cell table:style-name="ce36" office:value-type="string" calcext:value-type="string" table:number-columns-spanned="7" table:number-rows-spanned="1">
       <text:p>Replace these values with those from results.csv and refresh the pivot table on the other sheet</text:p>
      </table:table-cell>
-     <table:covered-table-cell table:number-columns-repeated="2"/>
-     <table:covered-table-cell table:style-name="ce3"/>
-     <table:covered-table-cell table:number-columns-repeated="3"/>
+     <table:covered-table-cell table:number-columns-repeated="6"/>
      <table:table-cell table:number-columns-repeated="1017"/>
     </table:table-row>
     <table:table-row table:style-name="ro1">
-     <table:table-cell table:style-name="ce2" office:value-type="string" calcext:value-type="string">
+     <table:table-cell table:style-name="ce37" office:value-type="string" calcext:value-type="string">
       <text:p>benchmark</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce2" office:value-type="string" calcext:value-type="string">
+     <table:table-cell table:style-name="ce37" office:value-type="string" calcext:value-type="string">
       <text:p>frame size</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce2" office:value-type="string" calcext:value-type="string">
+     <table:table-cell table:style-name="ce37" office:value-type="string" calcext:value-type="string">
       <text:p>repetitions</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce2" office:value-type="string" calcext:value-type="string">
+     <table:table-cell table:style-name="ce37" office:value-type="string" calcext:value-type="string">
       <text:p>time</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce2" office:value-type="string" calcext:value-type="string">
+     <table:table-cell table:style-name="ce37" office:value-type="string" calcext:value-type="string">
       <text:p>CPU model</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce2" office:value-type="string" calcext:value-type="string">
+     <table:table-cell table:style-name="ce37" office:value-type="string" calcext:value-type="string">
       <text:p>CPU arch</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce2" office:value-type="string" calcext:value-type="string">
+     <table:table-cell table:style-name="ce37" office:value-type="string" calcext:value-type="string">
       <text:p>CPU count</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="ce2" table:number-columns-repeated="1017"/>
+     <table:table-cell table:style-name="ce37" table:number-columns-repeated="1017"/>
     </table:table-row>
     <table:table-row table:style-name="ro1">
      <table:table-cell office:value-type="string" calcext:value-type="string">
@@ -780,171 +951,6 @@
     </table:table-row>
     <table:table-row table:style-name="ro1">
      <table:table-cell table:number-columns-repeated="1024"/>
-    </table:table-row>
-   </table:table>
-   <table:table table:name="Evaluation" table:style-name="ta1">
-    <table:table-column table:style-name="co9" table:default-cell-style-name="Default"/>
-    <table:table-column table:style-name="co10" table:default-cell-style-name="ce3"/>
-    <table:table-column table:style-name="co11" table:default-cell-style-name="ce3"/>
-    <table:table-column table:style-name="co12" table:default-cell-style-name="ce3"/>
-    <table:table-column table:style-name="co13" table:default-cell-style-name="ce3"/>
-    <table:table-column table:style-name="co14" table:default-cell-style-name="ce96"/>
-    <table:table-column table:style-name="co15" table:default-cell-style-name="ce98"/>
-    <table:table-column table:style-name="co16" table:default-cell-style-name="Default"/>
-    <table:table-row table:style-name="ro1">
-     <table:table-cell table:style-name="ce5" office:value-type="string" calcext:value-type="string">
-      <text:p>Average - time</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="ce10" office:value-type="string" calcext:value-type="string">
-      <text:p>benchmark</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="ce16" table:number-columns-repeated="2"/>
-     <table:table-cell table:style-name="ce26"/>
-     <table:table-cell table:number-columns-repeated="3"/>
-    </table:table-row>
-    <table:table-row table:style-name="ro1">
-     <table:table-cell table:style-name="ce6" office:value-type="string" calcext:value-type="string">
-      <text:p>CPU model</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="ce11" office:value-type="string" calcext:value-type="string">
-      <text:p>no_workaround</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="ce17" office:value-type="string" calcext:value-type="string">
-      <text:p>with_loc</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="ce17" office:value-type="string" calcext:value-type="string">
-      <text:p>with_workaround</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="ce27" office:value-type="string" calcext:value-type="string">
-      <text:p>Total Result</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="ce97" office:value-type="string" calcext:value-type="string">
-      <text:p>Workaround % no workaround</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="ce99" office:value-type="string" calcext:value-type="string">
-      <text:p>workaround time % loc</text:p>
-     </table:table-cell>
-     <table:table-cell/>
-    </table:table-row>
-    <table:table-row table:style-name="ro1">
-     <table:table-cell table:style-name="ce7" office:value-type="string" calcext:value-type="string">
-      <text:p>AMD Ryzen 5 2400G with Radeon Vega Graphics</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="ce12" office:value-type="float" office:value="540.701800495386" calcext:value-type="float">
-      <text:p>540,7</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="ce18" office:value-type="float" office:value="567.921154816635" calcext:value-type="float">
-      <text:p>567,9</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="ce22" office:value-type="float" office:value="442.031032536179" calcext:value-type="float">
-      <text:p>442,0</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="ce28" office:value-type="float" office:value="516.884662616067" calcext:value-type="float">
-      <text:p>516,9</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="ce98" table:formula="of:=[.$D3]/[.B3]" office:value-type="percentage" office:value="0.817513520634098" calcext:value-type="percentage">
-      <text:p>81,75%</text:p>
-     </table:table-cell>
-     <table:table-cell table:formula="of:=[.$D3]/[.C3]" office:value-type="percentage" office:value="0.778331690565212" calcext:value-type="percentage">
-      <text:p>77,83%</text:p>
-     </table:table-cell>
-     <table:table-cell/>
-    </table:table-row>
-    <table:table-row table:style-name="ro1">
-     <table:table-cell table:style-name="ce8" office:value-type="string" calcext:value-type="string">
-      <text:p>AMD Ryzen 5 3500U with Radeon Vega Mobile Gfx</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="ce13" office:value-type="float" office:value="420.531277493996" calcext:value-type="float">
-      <text:p>420,5</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="ce19" office:value-type="float" office:value="426.819339965005" calcext:value-type="float">
-      <text:p>426,8</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="ce23" office:value-type="float" office:value="342.230808434004" calcext:value-type="float">
-      <text:p>342,2</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="ce29" office:value-type="float" office:value="396.527141964335" calcext:value-type="float">
-      <text:p>396,5</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="ce98" table:formula="of:=[.$D4]/[.B4]" office:value-type="percentage" office:value="0.813805837400264" calcext:value-type="percentage">
-      <text:p>81,38%</text:p>
-     </table:table-cell>
-     <table:table-cell table:formula="of:=[.$D4]/[.C4]" office:value-type="percentage" office:value="0.801816544822134" calcext:value-type="percentage">
-      <text:p>80,18%</text:p>
-     </table:table-cell>
-     <table:table-cell/>
-    </table:table-row>
-    <table:table-row table:style-name="ro1">
-     <table:table-cell table:style-name="ce8" office:value-type="string" calcext:value-type="string">
-      <text:p>AMD Ryzen 5 PRO 3400G with Radeon Vega Graphics</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="ce13" office:value-type="float" office:value="345.284840297998" calcext:value-type="float">
-      <text:p>345,3</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="ce19" office:value-type="float" office:value="357.955207077" calcext:value-type="float">
-      <text:p>358,0</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="ce23" office:value-type="float" office:value="242.167714471998" calcext:value-type="float">
-      <text:p>242,2</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="ce29" office:value-type="float" office:value="315.135920615665" calcext:value-type="float">
-      <text:p>315,1</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="ce98" table:formula="of:=[.$D5]/[.B5]" office:value-type="percentage" office:value="0.701356347596944" calcext:value-type="percentage">
-      <text:p>70,14%</text:p>
-     </table:table-cell>
-     <table:table-cell table:formula="of:=[.$D5]/[.C5]" office:value-type="percentage" office:value="0.676530777270982" calcext:value-type="percentage">
-      <text:p>67,65%</text:p>
-     </table:table-cell>
-     <table:table-cell/>
-    </table:table-row>
-    <table:table-row table:style-name="ro1">
-     <table:table-cell table:style-name="ce8" office:value-type="string" calcext:value-type="string">
-      <text:p>Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="ce14" office:value-type="float" office:value="529.270477404003" calcext:value-type="float">
-      <text:p>529,3</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="ce20" office:value-type="float" office:value="527.762633746999" calcext:value-type="float">
-      <text:p>527,8</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="ce24" office:value-type="float" office:value="484.492259248" calcext:value-type="float">
-      <text:p>484,5</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="ce30" office:value-type="float" office:value="513.841790133001" calcext:value-type="float">
-      <text:p>513,8</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="ce98" table:formula="of:=[.$D6]/[.B6]" office:value-type="percentage" office:value="0.915396342573963" calcext:value-type="percentage">
-      <text:p>91,54%</text:p>
-     </table:table-cell>
-     <table:table-cell table:formula="of:=[.$D6]/[.C6]" office:value-type="percentage" office:value="0.918011674695896" calcext:value-type="percentage">
-      <text:p>91,80%</text:p>
-     </table:table-cell>
-     <table:table-cell/>
-    </table:table-row>
-    <table:table-row table:style-name="ro1">
-     <table:table-cell table:style-name="ce9" office:value-type="string" calcext:value-type="string">
-      <text:p>Total Result</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="ce15" office:value-type="float" office:value="458.947098922846" calcext:value-type="float">
-      <text:p>458,9</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="ce21" office:value-type="float" office:value="470.11458390141" calcext:value-type="float">
-      <text:p>470,1</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="ce25" office:value-type="float" office:value="377.730453672545" calcext:value-type="float">
-      <text:p>377,7</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="ce31" office:value-type="float" office:value="435.597378832267" calcext:value-type="float">
-      <text:p>435,6</text:p>
-     </table:table-cell>
-     <table:table-cell table:number-columns-repeated="3"/>
-    </table:table-row>
-    <table:table-row table:style-name="ro1" table:number-rows-repeated="1048568">
-     <table:table-cell table:number-columns-repeated="8"/>
-    </table:table-row>
-    <table:table-row table:style-name="ro1">
-     <table:table-cell table:number-columns-repeated="8"/>
     </table:table-row>
    </table:table>
    <table:named-expressions/>

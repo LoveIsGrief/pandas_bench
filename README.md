@@ -19,7 +19,13 @@ Create a pull request with the updated CSV containing your values.
 # How to evaluate
 
  - Open [`eval.fods`](./eval.fods) (works with LibreOffice)
- - Copy paste the contents of `results.csv` onto the first sheet (**don't replace the red text**)
+ - Copy paste the contents of `results.csv` onto the `results.csv` sheet (**don't replace the red text**)
  - Switch to the second sheet (Called "Evaluation"), right click on the table and select "Refresh..."
 
 You might need to extend the second table beside the first (pivot table) one if your CPU is hitherto unknown. 
+
+## Current results
+
+Generated with LibreOffice [`gen_img.sh`](./gen_img.sh)
+
+![eval.jpg](eval.jpg)
