@@ -4,3 +4,22 @@ We need to know whether `PerformanceWarning` is an indication of a significant s
  or whether it can be safely ignored.
 Therefore we are collecting stats to make a decision.
 
+[Related issue on freqtrade](https://github.com/freqtrade/freqtrade/issues/5408)
+
+# How to run
+
+You will need [`docker`](https://docs.docker.com/get-docker/) and [`docker-compose`](https://docs.docker.com/compose/)
+
+`docker-compose up`
+
+## Sharing results
+
+Create a pull request with the updated CSV containing your values.
+
+# How to evaluate
+
+ - Open [`eval.fods`](./eval.fods) (works with LibreOffice)
+ - Copy paste the contents of `results.csv` onto the first sheet (**don't replace the red text**)
+ - Switch to the second sheet (Called "Evaluation"), right click on the table and select "Refresh..."
+
+You might need to extend the second table beside the first (pivot table) one if your CPU is hitherto unknown. 

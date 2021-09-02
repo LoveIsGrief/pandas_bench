@@ -1,0 +1,13 @@
+"benchmark","frame size","repetitions","time","CPU model","CPU arch","CPU count"
+"no_workaround",300000,1000,345.284840297998,"AMD Ryzen 5 PRO 3400G with Radeon Vega Graphics","x86_64",8
+"with_loc",300000,1000,357.955207077,"AMD Ryzen 5 PRO 3400G with Radeon Vega Graphics","x86_64",8
+"with_workaround",300000,1000,242.167714471998,"AMD Ryzen 5 PRO 3400G with Radeon Vega Graphics","x86_64",8
+"no_workaround",300000,1000,540.7018004953861,"AMD Ryzen 5 2400G with Radeon Vega Graphics","x86_64",8
+"with_loc",300000,1000,567.921154816635,"AMD Ryzen 5 2400G with Radeon Vega Graphics","x86_64",8
+"with_workaround",300000,1000,442.0310325361788,"AMD Ryzen 5 2400G with Radeon Vega Graphics","x86_64",8
+"no_workaround",300000,1000,529.270477404003,"Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz","x86_64",8
+"with_loc",300000,1000,527.7626337469992,"Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz","x86_64",8
+"with_workaround",300000,1000,484.49225924799975,"Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz","x86_64",8
+"no_workaround",300000,1000,420.53127749399573,"AMD Ryzen 5 3500U with Radeon Vega Mobile Gfx","x86_64",8
+"with_loc",300000,1000,426.8193399650045,"AMD Ryzen 5 3500U with Radeon Vega Mobile Gfx","x86_64",8
+"with_workaround",300000,1000,342.23080843400385,"AMD Ryzen 5 3500U with Radeon Vega Mobile Gfx","x86_64",8

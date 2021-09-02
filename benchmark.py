@@ -15,9 +15,12 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
+import argparse
+import csv
 import json
 import subprocess
 import timeit
+from io import TextIOBase
 
 import numpy as np
 import pandas as pd
@@ -28,36 +31,25 @@ START = 10
 STOP = 115
 
 
-def do_loc(dataframe: pd.DataFrame) -> pd.DataFrame:
+def with_loc(dataframe: pd.DataFrame) -> pd.DataFrame:
     for period in range(START, STOP):
         dataframe.loc[:, f"sma_{period}"] = ta.SMA(dataframe, timeperiod=period)
     return dataframe.copy()
 
 
-def do_no_workaround(dataframe: pd.DataFrame) -> pd.DataFrame:
+def no_workaround(dataframe: pd.DataFrame) -> pd.DataFrame:
     for period in range(START, STOP):
         dataframe[f"sma_{period}"] = ta.SMA(dataframe, timeperiod=period)
     return dataframe.copy()
 
 
-def do_workaround(dataframe: pd.DataFrame) -> pd.DataFrame:
+def with_workaround(dataframe: pd.DataFrame) -> pd.DataFrame:
     frames = [dataframe]
     for period in range(START, STOP):
         frames.append(DataFrame({
             f"sma_{period}": ta.SMA(dataframe, timeperiod=period)
         }))
     return pd.concat(frames, axis=1)
-
-
-def do_other_workaround(dataframe: pd.DataFrame) -> pd.DataFrame:
-    frame = None
-    for period in range(START, STOP):
-        p_frame = DataFrame({f"sma_{period}": ta.SMA(dataframe, timeperiod=period)})
-        if frame is not None:
-            frame = pd.concat([frame, p_frame], axis=1)
-        else:
-            frame = p_frame
-    return frame
 
 
 def get_cpu_info():
@@ -67,26 +59,81 @@ def get_cpu_info():
     return info
 
 
-def main():
-    # cur_path = Path(__file__)
+BENCHMARKS = {bench.__name__: bench for bench in [
+    no_workaround,
+    with_loc,
+    with_workaround,
+]}
+
+CSV_HEADERS = [
+    "timestamp",
+    "benchmark",
+    "frame size",
+    "repetitions",
+    "time",
+    "CPU model",
+    "CPU arch",
+    "CPU count",
+]
+
+
+def main(csv_file: TextIOBase, bench_names: list, framesize: int, repetitions: int):
+    # Check if we're writing to a new CSV file
+    new_csv = len(csv_file.read()) == 0
+
+    cpu_info = get_cpu_info()
     print("Model name: {Model name}\n"
           "Architecture: {Architecture}\n"
-          "CPU(s): {CPU(s)}\n".format(**get_cpu_info()), flush=True)
+          "CPU(s): {CPU(s)}\n".format(**cpu_info), flush=True)
 
-    tests = [
-        do_loc,
-        do_no_workaround,
-        do_workaround
-    ]
-    dataframe = DataFrame(dict(close=np.random.randn(300_000)))
+    # Generate our random samples
+    dataframe = DataFrame(dict(close=np.random.randn(framesize)))
     print(f"len dataframe {len(dataframe)}")
-    count = 1000
-    for test in tests:
-        name = test.__name__
-        print(f"\n{name}", flush=True)
-        time = timeit.timeit(lambda: test(dataframe.copy()), number=count)
-        print(f"Seconds to run {count} times: {time} (per run {time / count})", flush=True)
+
+    # Run the selected benchmarks
+    for bench_name in bench_names:
+        bench_func = BENCHMARKS[bench_name]
+        print(f"\n{bench_name}", flush=True)
+        time = timeit.timeit(lambda: bench_func(dataframe.copy()), number=repetitions)
+        print(f"Seconds to run {repetitions} times: {time} (per run {time / repetitions})",
+              flush=True)
+
+        csv_writer = csv.writer(csv_file)
+        if new_csv:
+            csv_writer.writerow(CSV_HEADERS)
+            new_csv = False
+        csv_writer.writerow([
+            # benchmark
+            bench_name,
+            # frame size
+            framesize,
+            # repetitions
+            repetitions,
+            # time
+            time,
+            # CPU model
+            cpu_info["Model name"],
+            # CPU arch
+            cpu_info["Architecture"],
+            # CPU count
+            cpu_info["CPU(s)"],
+        ])
 
 
 if __name__ == '__main__':
-    main()
+    benchmark_names = sorted(BENCHMARKS.keys())
+
+    parser = argparse.ArgumentParser(
+        description="Benchmark workarounds to pandas' PerformanceWarning"
+    )
+    parser.add_argument("-r", "--repetitions", type=int, default=1000,
+                        help="How many times to run each benchmark on the dataset")
+    parser.add_argument("-f", "--frame-size", type=int, default=300_000,
+                        help="How many rows to add to the dataset")
+    parser.add_argument("-b", "--benchmark", action="append", choices=benchmark_names,
+                        default=benchmark_names,
+                        help="Select which benchmark to run. Can be added multiple times")
+    parser.add_argument("csv", type=argparse.FileType(mode="a+"))
+
+    args = parser.parse_args()
+    main(args.csv, sorted(list(set(args.benchmark))), args.frame_size, args.repetitions)
