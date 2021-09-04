@@ -11,7 +11,6 @@
 "no_workaround",300000,1000,420.53127749399573,"AMD Ryzen 5 3500U with Radeon Vega Mobile Gfx","x86_64",8
 "with_loc",300000,1000,426.8193399650045,"AMD Ryzen 5 3500U with Radeon Vega Mobile Gfx","x86_64",8
 "with_workaround",300000,1000,342.23080843400385,"AMD Ryzen 5 3500U with Radeon Vega Mobile Gfx","x86_64",8
-timestamp,benchmark,frame size,repetitions,time,CPU model,CPU arch,CPU count
 no_workaround,300000,1000,846.212536429,Intel(R) Core(TM) i5-5350U CPU @ 1.80GHz,x86_64,2
 with_loc,300000,1000,872.3565223190001,Intel(R) Core(TM) i5-5350U CPU @ 1.80GHz,x86_64,2
 with_workaround,300000,1000,675.5835985549998,Intel(R) Core(TM) i5-5350U CPU @ 1.80GHz,x86_64,2

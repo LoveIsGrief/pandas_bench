@@ -66,7 +66,6 @@ BENCHMARKS = {bench.__name__: bench for bench in [
 ]}
 
 CSV_HEADERS = [
-    "timestamp",
     "benchmark",
     "frame size",
     "repetitions",
@@ -79,6 +78,7 @@ CSV_HEADERS = [
 
 def main(csv_file: TextIOBase, bench_names: list, framesize: int, repetitions: int):
     # Check if we're writing to a new CSV file
+    csv_file.seek(0)
     new_csv = len(csv_file.read()) == 0
 
     cpu_info = get_cpu_info()
