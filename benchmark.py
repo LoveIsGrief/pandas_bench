@@ -126,7 +126,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(
         description="Benchmark workarounds to pandas' PerformanceWarning"
     )
-    parser.add_argument("-r", "--repetitions", type=int, default=1000,
+    parser.add_argument("-r", "--repetitions", type=int, default=100,
                         help="How many times to run each benchmark on the dataset")
     parser.add_argument("-f", "--frame-size", type=int, default=300_000,
                         help="How many rows to add to the dataset")
