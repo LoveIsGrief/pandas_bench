@@ -52,6 +52,16 @@ def with_workaround(dataframe: pd.DataFrame) -> pd.DataFrame:
     return pd.concat(frames, axis=1)
 
 
+def with_list_comp(dataframe: pd.DataFrame) -> pd.DataFrame:
+    frame = pd.concat([
+        DataFrame({f"sma_{period}": ta.SMA(dataframe, timeperiod=period)})
+        for period in range(START, STOP)]
+    )
+    result = pd.concat([dataframe, frame.copy()], axis=1)
+    print(".", end="", flush=True)
+    return result
+
+
 def get_cpu_info():
     # Pass empty env to use default language (English) in output
     stdout = subprocess.run(["lscpu", "--json"], stdout=subprocess.PIPE, env={}).stdout
@@ -61,6 +71,7 @@ def get_cpu_info():
 
 BENCHMARKS = {bench.__name__: bench for bench in [
     no_workaround,
+    with_list_comp,
     with_loc,
     with_workaround,
 ]}
