@@ -3,7 +3,7 @@ version: "3"
 services:
   bench:
     image: "freqtradeorg/freqtrade:2021.8"
-    entrypoint: /usr/local/bin/python3
-    command: /app/benchmark.py /app/results.csv
+    entrypoint: /usr/local/bin/python3 /app/benchmark.py
+    command: -c /app/results.csv
     volumes:
       - ./:/app

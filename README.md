@@ -12,6 +12,15 @@ You will need [`docker`](https://docs.docker.com/get-docker/) and [`docker-compo
 
 `docker-compose up`
 
+**Help**
+
+`docker-compose run --rm bench --help` will output the help of the script.
+
+**Specific benchmark**
+
+You can run a specific benchmark with `docker-compose run --rm bench -b <benchmark_name> -c /app/results.csv`,
+which will run it and append the result to `results.csv`.
+
 ## Sharing results
 
 Create a pull request with the updated CSV containing your values.

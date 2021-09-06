@@ -77,9 +77,12 @@ CSV_HEADERS = [
 
 
 def main(csv_file: TextIOBase, bench_names: list, framesize: int, repetitions: int):
-    # Check if we're writing to a new CSV file
-    csv_file.seek(0)
-    new_csv = len(csv_file.read()) == 0
+    if csv_file:
+        # Check if we're writing to a new CSV file
+        csv_file.seek(0)
+        new_csv = len(csv_file.read()) == 0
+    else:
+        new_csv = False
 
     cpu_info = get_cpu_info()
     print("Model name: {Model name}\n"
@@ -98,6 +101,8 @@ def main(csv_file: TextIOBase, bench_names: list, framesize: int, repetitions: i
         print(f"Seconds to run {repetitions} times: {time} (per run {time / repetitions})",
               flush=True)
 
+        if not csv_file:
+            continue
         csv_writer = csv.writer(csv_file)
         if new_csv:
             csv_writer.writerow(CSV_HEADERS)
@@ -131,9 +136,10 @@ if __name__ == '__main__':
     parser.add_argument("-f", "--frame-size", type=int, default=300_000,
                         help="How many rows to add to the dataset")
     parser.add_argument("-b", "--benchmark", action="append", choices=benchmark_names,
-                        default=benchmark_names,
                         help="Select which benchmark to run. Can be added multiple times")
-    parser.add_argument("csv", type=argparse.FileType(mode="a+"))
+    parser.add_argument("-c", "--csv", type=argparse.FileType(mode="a+"),
+                        help="Where to store the results")
 
     args = parser.parse_args()
-    main(args.csv, sorted(list(set(args.benchmark))), args.frame_size, args.repetitions)
+    benchmarks = args.benchmark or benchmark_names
+    main(args.csv, sorted(list(set(benchmarks))), args.frame_size, args.repetitions)
